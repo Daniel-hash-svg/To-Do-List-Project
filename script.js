@@ -15,13 +15,17 @@ function add(){
     ol.appendChild(list)
     input.value='';
 }
-//requisito 7
+//requisito 7 e 8
 ol.addEventListener('click',grayColor)
 
-function grayColor(event){
-    
-    event.target.style.backgroundColor='rgb(128, 128, 128)'   
 
+function grayColor(event){
+    let array=document.querySelectorAll('li')
+    for(let index=0;index<array.length;index+=1){
+        array[index].style.backgroundColor='white'
+    } 
+    event.target.style.backgroundColor='rgb(128, 128, 128)'   
+   
 }
 
 
