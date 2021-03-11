@@ -15,6 +15,15 @@ function add(){
     ol.appendChild(list)
     input.value='';
 }
+//requisito 7
+ol.addEventListener('click',grayColor)
+
+function grayColor(event){
+    
+    event.target.style.backgroundColor='rgb(128, 128, 128)'   
+
+}
+
 
 
 
