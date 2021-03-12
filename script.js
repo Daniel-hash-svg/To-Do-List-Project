@@ -20,13 +20,26 @@ ol.addEventListener('click',grayColor)
 
 
 function grayColor(event){
-    let array=document.querySelectorAll('li')
+    let array=document.querySelectorAll('li')//isso cria um array com todas as LIs
     for(let index=0;index<array.length;index+=1){
         array[index].style.backgroundColor='white'
     } 
     event.target.style.backgroundColor='rgb(128, 128, 128)'   
    
 }
+//requisito 10
+let cleanButton=document.getElementById('apaga-tudo');
+cleanButton.addEventListener('click',eraseList);
+function eraseList(){
+    let array=document.querySelectorAll('li')
+    for(let index=0;index<array.length;index+=1){
+        ol.removeChild(array[index]); //assim como fiz appendchild pra adicionar um filho ao OL, fiz esse removechild pra remover as LIs( tive que botar array[index] ao invés de 'li' ou a var list. Só assim deu certo.)
+        
+        //tentei fazer array[index].innerHTML='';   Porém só estava apagando  o texto das LIs e não apaga os números das LIs.
+    }
+}
+eraseList();
+
 
 
 
