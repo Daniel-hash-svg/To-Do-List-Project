@@ -1,3 +1,7 @@
+//DÚVIDAS PRA TIRAR NO PLANTÃO: COISAS DO ESLINT; REQUISITO 14 E AS DUAS DÚVIDAS DE CSS
+
+
+
 let input=document.getElementById('texto-tarefa');
 let textInsideInput=input.value;
 let button=document.getElementById('criar-tarefa')
@@ -39,6 +43,26 @@ function eraseList(){
     }
 }
 eraseList();
+
+
+//requisito 14
+  let xButton=document.getElementById('remover-selecionado');
+
+xButton.addEventListener('click',removeSelected)
+
+function removeSelected(){
+    let array=document.querySelectorAll('li')
+
+    for(let index=0;index<array.length;index+=1){  
+       if(array[index].style.backgroundColor=='rgb(128, 128, 128)'){
+        ol.removeChild(array[index]);
+       } //tava dando errado antes porque tinha errado identação. E não pode ser apenas um =, senão apaga todas as LI(o que é estranho). Mas o correto mesmo,Como quero fazer comparação nesse requisito, é usar ==
+    }
+}    
+
+ 
+
+
 
 
 
