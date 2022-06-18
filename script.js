@@ -1,6 +1,3 @@
-//DÚVIDAS PRA TIRAR NO PLANTÃO: COISAS DO ESLINT; REQUISITO 14 E AS DUAS DÚVIDAS DE CSS
-
-
 
 let input=document.getElementById('texto-tarefa');
 let textInsideInput=input.value;
@@ -13,8 +10,8 @@ button.addEventListener('click',add)
 
 function add(){
     
-    let list=document.createElement('li')//aqui precisa estar dentro dessa função. Senão aparece apenas uma li sempre.
-    list.innerHTML=input.value// aqui não dava certo se colocasse textInsideInput. Só deu certo com input.value
+    let list=document.createElement('li')
+    list.innerHTML=input.value
     
     ol.appendChild(list)
     input.value='';
@@ -24,7 +21,7 @@ ol.addEventListener('click',grayColor)
 
 
 function grayColor(event){
-    let array=document.querySelectorAll('li')//isso cria um array com todas as LIs
+    let array=document.querySelectorAll('li')//cria um array com todas as LIs
     for(let index=0;index<array.length;index+=1){
         array[index].style.backgroundColor='white'
     } 
